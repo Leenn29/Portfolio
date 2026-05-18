@@ -1,0 +1,263 @@
+
+    :root {
+  --rose: #f2c4ce;
+  --rose-mid: #e8a0b0;
+  --noir: #3a2f30;
+  --gris: #9a8f90;
+  --fond: #fdf0f2;
+  --blanc: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  color: var(--noir);
+  background: var(--blanc);
+  overflow-x: hidden;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 60px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--rose);
+}
+
+.logo-site {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: var(--gris);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#accueil {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 100px 60px 80px;
+  background: linear-gradient(135deg, var(--blanc) 55%, var(--fond) 100%);
+  min-height: 90vh;
+}
+
+
+.presentation {
+  flex: 1;
+}
+
+.mini-titre,
+.petit-titre {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rose-mid);
+  margin-bottom: 14px;
+}
+
+.nom-principal {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.nom-principal em {
+  color: var(--gris);
+}
+
+.sous-titre {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--gris);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.ligne-separation {
+  width: 48px;
+  height: 1px;
+  background: var(--rose-mid);
+  margin-bottom: 24px;
+}
+
+.texte-presentation,
+.description-projet {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #6a5e5f;
+}
+
+.texte-presentation {
+  max-width: 500px;
+  margin-bottom: 36px;
+}
+
+.infos-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ligne-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--gris);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rose-mid);
+}
+#sommaire,
+.section-projet {
+  padding: 100px 60px;
+}
+
+#sommaire {
+  background: var(--fond);
+  text-align: center;
+}
+
+.entete-section {
+  margin-bottom: 56px;
+}
+
+.grand-titre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  margin-bottom: 60px;
+}
+
+.cartes-menu {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.carte-menu {
+  flex: 1 1 220px;
+  max-width: 280px;
+  padding: 40px 32px;
+  text-decoration: none;
+  color: var(--noir);
+  background: var(--blanc);
+  border: 1px solid var(--rose);
+}
+
+.numero-menu {
+  display: block;
+  margin-bottom: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  color: var(--rose);
+}
+
+.galerie-projets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.bloc-image img {
+  width: 100%;
+  display: block;
+}
+
+.texte-image {
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid var(--rose);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--gris);
+  text-transform: uppercase;
+}
+
+.logos-armeniens {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.logos-armeniens .bloc-image {
+  width: 31%;
+}
+
+footer {
+  background: var(--noir);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 48px 40px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+footer span {
+  color: var(--rose);
+}
+
+@media (max-width: 900px) {
+
+  nav {
+    padding: 18px 24px;
+  }
+
+  #accueil {
+    flex-direction: column;
+    padding: 60px 24px;
+    gap: 40px;
+  }
+
+  
+
+    #sommaire,
+  .section-projet {
+    padding: 70px 24px;
+  }
+
+  .galerie-projets {
+    grid-template-columns: 1fr;
+  }
+
+  .logos-armeniens {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logos-armeniens .bloc-image {
+    width: 100%;
+  }
+}
